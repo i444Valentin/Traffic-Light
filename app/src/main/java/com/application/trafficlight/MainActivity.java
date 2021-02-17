@@ -30,7 +30,7 @@ public class MainActivity extends AppCompatActivity {
             mAccelLast = mAccelCurrent;
             mAccelCurrent = (float) Math.sqrt((double) (x*x + y*y + z*z));
             float delta = mAccelCurrent - mAccelLast;
-            mAccel = mAccel * 0.9f + delta; // выполнить фильтр низких частот
+            mAccel = mAccel * 0.9f + delta; // выполнить фильтрацию низких частот
             if (mAccel > 22) {
                 onShakeResetBackgroundGray();
             }
